@@ -68,3 +68,51 @@ for i in reversed(numbers):
 - enumerate():리스트의 요소를 반복할 대 현재 인덱스가 몇 번째인지 나타내줌
 - 에제
 ```python
+example_list = ["요소A", "요소B", "요소C"]
+
+print(example_list) #그냥 출력하기
+print() #튜플로 출력
+
+print(enumerate(example_list)) #enumerate 함수적용 출력
+print()
+
+print(list(enumerate(example_list))) #list() 함수로 강제 변환 출력
+print()
+
+for i, value in enumerate(example_list):
+    print("{}번째 요소는 {}입니다.".format(i, value)) #for 반복문과 enumerate() 함수 조합해서 출력
+```
+enumerate() 함수를 사용하면 for 와 in 사이에 **반복 변수를 두개 넣을수 있음**
+
+### 딕셔너리의 items() 함수와 반복문 조합하기
+- 딕셔너리는 items() 함수와 함께 사용하면 **키와 값**을 조합해서 쉽게 반복문을 작성할수 있음
+- 예제
+```python
+example_dictionary = {
+    "키A": "값A",
+    "키B": "값B",
+    "키C": "값C",
+}
+
+print("items():", example_dictionary.items()) #딕셔너리 items() 함수 결과 출력
+print()
+
+for key, element in example_dictionary.items():
+    print("dictionary[{}] = {}".format(key, elemet)) #for 반복문과 items()함수 조합
+```
+
+### 리스트 내포
+- 다음 코드는 range(0, 20, 2)로 0 부터 20사이의 짝수를 구한 뒤 제곱해서 새로운 리스트를 만듦
+```python
+array = []
+
+for i in range(0, 20, 2):
+    array.append(i * i)
+
+print(array)
+```
+- 파이썬에서는 더 간단하게 구현 가능
+```python
+array = [i * i for i in range(0, 20, 2)] #최종 결과를 앞에 작성
+print(array)
+```
