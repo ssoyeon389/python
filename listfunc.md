@@ -116,3 +116,25 @@ print(array)
 array = [i * i for i in range(0, 20, 2)] #최종 결과를 앞에 작성
 print(array)
 ```
+- 조건을 활용한 리스트 내포
+- array 의 요소를 fruit 이라고 할때 **초콜릿이 아닌** fruit으로 리스트를 재조합하는 코드
+```python
+array = ["사과", "자두", "초콜릿", "바나나", "체리"]
+output = [fruit for fruit in array if fruit != "초콜릿"]
+
+print(output)
+```
+```python
+array = ["사과", "자두", "초콜릿", "바나나", "체리"]
+output = [fruit
+          for fruit in array
+          if fruit != "초콜릿"]
+
+print(output)
+```
+## 문자열의 join 함수
+- join() 는 리스트의 요소를 문자열로 연결함
+```python
+print("::".join(["1","2","3","4","5"]))
+#1::2::3::4::5 출력
+```
