@@ -1,3 +1,4 @@
+```python
 import random
 
 class Account:
@@ -44,3 +45,4 @@ print(kim.balance)
 for i in range(0, 5+1):
     kim.deposit(1)
 kim.display_info()
+```
